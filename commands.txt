@@ -5,7 +5,13 @@ curl http://localhost:4000
 Detatched Mode-
 docker run -d -p 4000:80 friendlyhello 
 docker container ls
-ab9459984caa
+docker container stop ab9459984caa
+docker tag image username/repository:tag
+docker tag friendlyhello bhavi289/get-started:part2
+docker image ls
+docker push bhavi289/get-started:part2
+From now on, you can use docker run and run your app on any machine with this command:
+docker run -p 4000:80 bhavi289/get-started:part2
 
 Troubleshooting for Linux users
 
